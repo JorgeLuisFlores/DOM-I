@@ -48,8 +48,21 @@ const siteContent = {
 const navItems = document.querySelectorAll("a");
 
 for (i = 0; i < navItems.length; i++) {
+  navItems[i].style.color = "green";
   navItems[i].append(siteContent["nav"][`nav-item-${i + 1}`]);
 }
+
+const newItem1 = document.createElement("a");
+const newItem2 = document.createElement("a");
+newItem1.textContent = "Hello";
+newItem2.textContent = "Goodbye";
+newItem1.setAttribute("href", "#");
+newItem2.setAttribute("href", "#");
+
+const firstAnchor = document.getElementsByTagName("nav")[0];
+const lastAnchor = document.getElementsByTagName("nav")[0];
+firstVal.prepend(newItem1);
+lastVal.appendChild(newItem2);
 
 //
 
